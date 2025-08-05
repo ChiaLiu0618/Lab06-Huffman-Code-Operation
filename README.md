@@ -59,7 +59,6 @@ This lab focuses on building a hardware system that generates optimal prefix cod
 ## Specifications
 ### General
 - You must not use any DesignWare IP.
-- Forbidden signal names: `*error*`, `*congratulation*`, `*latch*`, `*fail*`, `*pass*`.
 - No non-synthesizable code or print/display statements in submissions.
 
 ### Top Module – `HT_TOP.v`
@@ -70,7 +69,6 @@ This lab focuses on building a hardware system that generates optimal prefix cod
 5. Inputs synchronized on **negative clock edge**
 6. Outputs synchronized on **positive clock edge**
 7. `out_valid` must not be high when `in_valid` is high
-8. TA will check correctness and timing through synthesis reports
 
 ### Soft IP – `SORT_IP.v`
 1. Must complete sorting in **1 clock cycle**
@@ -81,48 +79,11 @@ This lab focuses on building a hardware system that generates optimal prefix cod
 
 ---
 
-## Simulation & Synthesis Commands
-| Folder         | Description               | Command                 |
-|----------------|---------------------------|-------------------------|
-| `01_RTL/`      | RTL Simulation            | `./01_run_vcs_rtl`      |
-| `02_SYN/`      | Synthesis                 | `./01_run_dc_shell`     |
-| `03_GATE/`     | Gate-Level Simulation     | `./01_run_vcs_gate`     |
-| `09_SUBMIT/`   | Submission Files          | –                       |
 
-- Clean logs: `./09_clean`
 
----
 
-## Grading Policy
-| Component                  | Weight |
-|----------------------------|--------|
-| Function Validity          | 50%    |
-| Performance (Area × Latency × Cycle time) | 30%    |
-| Soft IP Function Correctness| 20%   |
 
-- Soft IP scoring varies by IP_WIDTH (up to 8%)
-- 2nd demo has 30% grade reduction
-
----
-
-## Submission Checklist
-Submit under `09_SUBMIT/Lab06_iclabXXX/`:
-- `HT_TOP_iclabXXX.v`
-- `SORT_IP_iclabXXX.v`
-- `CYCLE_iclabXXX.txt`
-- `syn_iclabXXX.tcl`
-
-**Deadlines:**  
-- 1st demo: 2023/10/30 (Mon) 12:00 PM  
-- 2nd demo: 2023/11/01 (Wed) 12:00 PM
-
-> ⚠️ Missing files or incorrect filenames → automatic fail or -5 points
-
----
 
 ## References
 - [Huffman Coding – Wikipedia](https://en.wikipedia.org/wiki/Huffman_coding)
 
----
-
-Let me know if you'd like to export this to a downloadable `README.md` or LaTeX file!
